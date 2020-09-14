@@ -57,7 +57,7 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'location_from')->widget(\kartik\widgets\Select2::classname(), [
         'data' => \yii\helpers\ArrayHelper::map(\app\models\Location::find()->orderBy('id')->asArray()->all(), 'id', function ($model) {
             $room = \app\models\Room::findOne($model['room_id']);
-            return $room->name . ' at ' . $room->building->name;
+            return $room->name . ' at ' . $room->building->name.'('.$model['description'].')';
         }),
         'options' => ['placeholder' => 'Choose Location'],
         'pluginOptions' => [
@@ -68,7 +68,7 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'location_to')->widget(\kartik\widgets\Select2::classname(), [
         'data' => \yii\helpers\ArrayHelper::map(\app\models\Location::find()->orderBy('id')->asArray()->all(), 'id', function ($model) {
             $room = \app\models\Room::findOne($model['room_id']);
-            return $room->name . ' at ' . $room->building->name;
+            return $room->name . ' at ' . $room->building->name.'('.$model['description'].')';
         }),
         'options' => ['placeholder' => 'Choose Location'],
         'pluginOptions' => [

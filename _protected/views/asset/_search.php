@@ -49,12 +49,12 @@ use yii\widgets\ActiveForm;
         'pluginOptions' => [
             'allowClear' => true
         ],
-    ])->textInput()->label('Person'); ?>
+    ])->label('Person'); ?>
 
     <?php echo $form->field($model, 'location_id')->widget(\kartik\widgets\Select2::classname(), [
         'data' => \yii\helpers\ArrayHelper::map(\app\models\Location::find()->orderBy('id')->asArray()->all(), 'id', function ($model) {
             $room = \app\models\Room::findOne($model['room_id']);
-            return $room->name . ' at ' . $room->building->name;
+            return $room->name . ' at ' . $room->building->name . '(' . $model['description'] . ')';
         }),
         'options' => ['placeholder' => 'Choose Location'],
         'pluginOptions' => [
