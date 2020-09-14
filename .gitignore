@@ -37,5 +37,7 @@ _protected/runtime/logs/*
 _protected/runtime/mail/*
 _protected/runtime/session/*
 _protected/runtime/cache/*
+_pritected/runtime/mpdf/*
+_protected/runtime/gii-2.0.34/*
 
 
