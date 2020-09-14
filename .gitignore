@@ -30,4 +30,11 @@ phpunit.phar
 /phpunit.xml
 
 # runtime
-_protected/runtime
+_protected/runtime/debug/*
+_protected/runtime/export/*
+_protected/runtime/log/*
+_protected/runtime/logs/*
+_protected/runtime/mail/*
+_protected/runtime/session/*
+
+
