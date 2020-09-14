@@ -120,9 +120,9 @@ class BuildingController extends Controller
 
         return $this->redirect(['index']);
     }
-    
+
     /**
-     * 
+     *
      * Export Building information into PDF format.
      * @param integer $id
      * @return mixed
@@ -144,7 +144,8 @@ class BuildingController extends Controller
             'orientation' => \kartik\mpdf\Pdf::ORIENT_PORTRAIT,
             'destination' => \kartik\mpdf\Pdf::DEST_BROWSER,
             'content' => $content,
-            'cssFile' => '@vendor/kartik-v/yii2-mpdf/assets/kv-mpdf-bootstrap.min.css',
+//            'cssFile' => '@vendor/kartik-v/yii2-mpdf/assets/kv-mpdf-bootstrap.min.css',
+            'cssFile' => '@vendor/kartik-v/yii2-mpdf/src/assets/kv-mpdf-bootstrap.min.css',
             'cssInline' => '.kv-heading-1{font-size:18px}',
             'options' => ['title' => \Yii::$app->name],
             'methods' => [
@@ -156,7 +157,7 @@ class BuildingController extends Controller
         return $pdf->render();
     }
 
-    
+
     /**
      * Finds the Building model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
@@ -172,7 +173,7 @@ class BuildingController extends Controller
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
-    
+
     /**
     * Action to load a tabular form grid
     * for Room
