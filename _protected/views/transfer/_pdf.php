@@ -24,7 +24,6 @@ $this->params['breadcrumbs'][] = $this->title;
     $gridColumn = [
         ['attribute' => 'id', 'visible' => false],
         'date',
-<<<<<<< HEAD
         [
                 'attribute' => 'asset0.name',
                 'label' => 'Asset'
@@ -44,27 +43,6 @@ $this->params['breadcrumbs'][] = $this->title;
         [
                 'attribute' => 'locationTo.id',
                 'label' => 'Location To'
-=======
-        [
-                'attribute' => 'asset0.name',
-                'label' => 'Asset'
-            ],
-        [
-                'attribute' => 'personFrom.title',
-                'label' => 'Person From'
-            ],
-        [
-                'attribute' => 'personTo.title',
-                'label' => 'Person To'
-            ],
-        [
-                'attribute' => 'locationFrom.id',
-                'label' => 'Location From'
-            ],
-        [
-                'attribute' => 'locationTo.id',
-                'label' => 'Location To'
->>>>>>> d544a114781609b84ad2cd2b8a06b4be215bdec5
             ],
     ];
     echo DetailView::widget([

@@ -22,15 +22,9 @@ use kartik\grid\GridView;
         ['attribute' => 'id', 'visible' => false],
         'name',
         'description',
-<<<<<<< HEAD
         [
             'attribute' => 'building.name',
             'label' => 'Building',
-=======
-        [
-            'attribute' => 'building.name',
-            'label' => 'Building',
->>>>>>> d544a114781609b84ad2cd2b8a06b4be215bdec5
         ],
     ];
     echo DetailView::widget([
