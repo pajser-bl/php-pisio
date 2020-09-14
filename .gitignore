@@ -36,5 +36,6 @@ _protected/runtime/log/*
 _protected/runtime/logs/*
 _protected/runtime/mail/*
 _protected/runtime/session/*
+_protected/runtime/cache/*
 
 
