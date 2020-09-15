@@ -42,7 +42,7 @@ class UserController extends Controller
         if (($username = $request['username']) !== null && ($password = $request['password']) !== null) {
             $user = User::findByUsername($username);
             if ($user && $user->validatePassword($password)) {
-                return $this->asJson(['status' => 200, 'access-token' => $user->auth_key]);
+                return $this->asJson(['status' => 200, 'access_token' => $user->auth_key]);
             }
 
         }
