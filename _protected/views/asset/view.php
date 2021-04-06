@@ -142,7 +142,7 @@ $this->params['breadcrumbs'][] = $this->title;
         if (isset($model->location->lat) && isset($model->location->lon) && $model->location->lon !== '' && $model->location->lat !== '') {
 
             echo Map::widget([
-                'apiKey' => 'AIzaSyDEvDe_sg3iMQhLF9mBysEpNnv0mqfPYnY',
+                'apiKey' => '',
                 'zoom' => 5,
                 'width' => '700px',
                 'height' => '400px',
